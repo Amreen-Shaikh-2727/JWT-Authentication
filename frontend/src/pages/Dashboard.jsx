@@ -11,7 +11,7 @@ function Dashboard() {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:5000/api/auth/protected", {
+      .get(`${import.meta.env.VITE_API_URL}/api/auth/protected`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
